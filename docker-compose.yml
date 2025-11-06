@@ -1,0 +1,11 @@
+services:
+  mongo-fca-low:
+    hostname: mongo-fca-low
+    build:
+      context: "."
+      args:
+        MONGO_VERSION: "5.0.23"
+    env_file:
+      - "./src/db/config/mongo-fca-low.env"
+    ports:
+      - "27017:27017"
